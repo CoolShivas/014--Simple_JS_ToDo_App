@@ -32,6 +32,9 @@
             paraElement.textContent = inputELem.value; // putting the inputField data on it;
             console.log(paraElement); // Getting the input values on console;
             listingToDos.append(paraElement); // Pushing the data on p tag;
+
+
+            inputELem.value = ""; // Clearing the field after writing;
         };
 
         clickBtn.addEventListener('click', () => {
