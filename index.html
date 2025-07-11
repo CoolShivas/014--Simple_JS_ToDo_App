@@ -6,7 +6,7 @@
     <title>ToDO</title>
 </head>
 <body>
-    <center>
+    
         <header>
             <h1>Simple ToDo App</h1>
         </header>
@@ -17,12 +17,13 @@
                 <div class="toDoListsElement"></div>
             </div>
         </main>
-    </center>
+    
     <script>
         let inputELem = document.getElementById("inputField");
         console.log(inputELem); // Every reloading the output is => input#inputField;
         let clickBtn = document.querySelector(".add_Btn");
         console.log(clickBtn); // button.add_Btn
+        let listingToDos = document.querySelector(".toDoListsElement");
 
         const addToDoS = () =>{
             console.log(inputELem.value);// Getting the input values on console;
@@ -30,7 +31,7 @@
             let paraElement = document.createElement('p'); // New element created;
             paraElement.textContent = inputELem.value; // putting the inputField data on it;
             console.log(paraElement); // Getting the input values on console;
-            
+            listingToDos.append(paraElement); // Pushing the data on p tag;
         };
 
         clickBtn.addEventListener('click', () => {
