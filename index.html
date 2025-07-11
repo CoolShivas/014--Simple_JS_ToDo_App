@@ -14,6 +14,7 @@
             <div>
                 <input type="text" id="inputField">
                 <button class="add_Btn"> Add </button>
+                <div class="toDoListsElement"></div>
             </div>
         </main>
     </center>
@@ -25,6 +26,11 @@
 
         const addToDoS = () =>{
             console.log(inputELem.value);// Getting the input values on console;
+
+            let paraElement = document.createElement('p'); // New element created;
+            paraElement.textContent = inputELem.value; // putting the inputField data on it;
+            console.log(paraElement); // Getting the input values on console;
+            
         };
 
         clickBtn.addEventListener('click', () => {
