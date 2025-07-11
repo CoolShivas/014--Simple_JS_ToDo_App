@@ -13,13 +13,24 @@
         <main>
             <div>
                 <input type="text" id="inputField">
-                <button> Add </button>
+                <button class="add_Btn"> Add </button>
             </div>
         </main>
     </center>
     <script>
         let inputELem = document.getElementById("inputField");
         console.log(inputELem); // Every reloading the output is => input#inputField;
+        let clickBtn = document.querySelector(".add_Btn");
+        console.log(clickBtn); // button.add_Btn
+
+        const addToDoS = () =>{
+            console.log(inputELem.value);// Getting the input values on console;
+        };
+
+        clickBtn.addEventListener('click', () => {
+            addToDoS(); // Whenever the btn click the addToDoS invokes;
+        });
+
     </script>
 </body>
 </html>
