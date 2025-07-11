@@ -44,6 +44,8 @@
 
         listingToDos.addEventListener("click", (e) => {
             console.log(e.target);// By clicking on already added items getting on console;
+            let delToDoListElem = e.target;
+            delToDoListElem.remove(); // Removing the already added items from the list;
         });
     </script>
 </body>
